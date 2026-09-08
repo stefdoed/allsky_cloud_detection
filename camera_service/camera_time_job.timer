@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer for automatic libcamera capture
+
+[Timer]
+OnCalendar=*:*:00,30
+Persistent=true
+AccuracySec=1s
+OnBootSec=60
+
+[Install]
+WantedBy=timers.target

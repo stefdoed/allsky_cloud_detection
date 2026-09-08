@@ -1,0 +1,13 @@
+#This file has to be copied to the appropiate system directory
+
+[Unit]
+Description=Automatic libcamera execution every 30 seconds
+After=network.target
+
+[Service]
+Type=simple
+User=allsky
+ExecStart=/home/allsky/camera_service/camera_command.sh
+
+[Install]
+WantedBy=multi-user.target
